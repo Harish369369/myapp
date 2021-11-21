@@ -14,7 +14,7 @@ pipeline{
        }
        stage('Tomcat deploy'){
             steps{
-                tomcat-deply("172.31.32.109","tomcat-dev","mywebb")
+                tomcat-deply("172.31.32.109","tomcat-dev","myweb")
             }
             post {
   always {
