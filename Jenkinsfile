@@ -13,9 +13,8 @@ pipeline{
             }
        }
        stage('Deploy to  Tomcat Development'){
-            
-           steps{
-               tomcat-deploy("172.31.32.109","tomcat-dev","myweb")
+            steps{
+               step tomcat-deploy("172.31.32.109","tomcat-dev","myweb")
             }
        }
     }
