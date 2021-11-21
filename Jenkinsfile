@@ -19,9 +19,11 @@ pipeline{
                 tomcatdeploy("3.110.94.187","tomcat-dev","myweb")
             }
        }
+        stages{
         post {
         always {
             cleanWs()
+                }
             }
         }
     }
