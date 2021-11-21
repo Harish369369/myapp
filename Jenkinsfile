@@ -14,8 +14,9 @@ pipeline{
        }
        stage('Tomcat deploy'){
             steps{
+                tomcat-deply("172.31.32.109","tomcat-dev","mywebb")
                 sshagent(['tomcat-dev']) {
-                sh "scp -o StrictHostKeyChecking=no target/myweb*.war ec2-user@172.31.32.109:/opt/tomcat8/webapps/"
+                sh "scp -o StrictHostKeyChecking=no target/myweb*.war ec2-user172.31.32.109:/opt/tomcat8/webapps/"
                 sh "ssh ec2-user@172.31.32.109 /opt/tomcat8/bin/startup.sh"
                 }
             }
