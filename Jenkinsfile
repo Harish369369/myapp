@@ -19,6 +19,7 @@ pipeline{
                 tomcatdeploy("3.110.94.187","tomcat-dev","myweb")
             }
        }
+        stage
             steps{
         post {
         always {
