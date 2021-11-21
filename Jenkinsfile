@@ -17,11 +17,12 @@ pipeline{
                tomcat-deploy("172.31.32.109","tomcat-dev","myweb")
             }
        }
-        stage(clean)
+        stage(clean){
        post {
          always {
             cleanWs()
                 }
             }
-       }
+        }
     }
+}
