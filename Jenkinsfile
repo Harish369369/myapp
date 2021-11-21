@@ -12,9 +12,9 @@ pipeline{
                 sh 'mvn clean package'
             }
        }
-       stage('Deploy to  Tomcat Development'){
+       stage("Deploy to  Tomcat Development"){
             steps{
-                tomcat-deploy("172.31.32.109","tomcat-dev","myweb")
+               tomcat-deploy("172.31.32.109","tomcat-dev","myweb")
             }
        }
             post {
