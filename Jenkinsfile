@@ -17,9 +17,9 @@ pipeline{
                tomcat-deploy("172.31.32.109","tomcat-dev","myweb")
             }
        }
-            post {
-  always {
-        cleanWs()
+       post {
+         always {
+            cleanWs()
                 }
             }
        }
